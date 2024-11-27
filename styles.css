@@ -36,9 +36,11 @@ footer {
 
 /* Carrossel */
 .carousel-inner img {
-    max-height: 250px; /* Reduz a altura máxima */
-    object-fit: contain; /* Mantém a proporção sem cortar a imagem */
-    margin: 0 auto; /* Centraliza a imagem no slide */
+    max-height: 200px; /* Reduz a altura máxima */
+    width: auto;       /* Mantém a largura proporcional */
+    object-fit: contain; /* Evita deformações nas imagens */
+    margin: 0 auto;    /* Centraliza as imagens no slide */
+    display: block;    /* Garante alinhamento central */
 }
 
 /* Produtos */
