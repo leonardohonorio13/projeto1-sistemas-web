@@ -7,7 +7,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- CSS Personalizado -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- Cabeçalho -->
@@ -25,6 +25,41 @@
             </div>
         </nav>
     </header>
+
+    <!-- Carrossel -->
+    <div id="carouselExample" class="carousel slide mt-4" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/maca.png" class="d-block w-100" alt="Maçã fresca e suculenta">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Maçã</h5>
+                    <p>Fresca e suculenta</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/banana.png" class="d-block w-100" alt="Banana madura e saborosa">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Banana</h5>
+                    <p>Madura e saborosa</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/arroz.png" class="d-block w-100" alt="Arroz branco tipo 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Arroz</h5>
+                    <p>Branco tipo 1</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+        </button>
+    </div>
 
     <!-- Corpo da página -->
     <main class="container mt-5">
@@ -46,44 +81,6 @@
                         <p>Nome do Produto: Banana</p>
                         <p>Descrição: Banana madura e saborosa.</p>
                         <p>Valor: R$3,00/kg</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Alimentos Não Perecíveis -->
-            <div id="nao-pereciveis" class="mt-4">
-                <h3>Alimentos Não Perecíveis</h3>
-                <div class="row">
-                    <div class="col-md-6">
-                        <img src="images/arroz.png" alt="Arroz branco" class="img-fluid">
-                        <p>Nome do Produto: Arroz</p>
-                        <p>Descrição: Arroz branco tipo 1.</p>
-                        <p>Valor: R$20,00</p>
-                    </div>
-                    <div class="col-md-6">
-                        <img src="images/feijao.png" alt="Feijão carioca" class="img-fluid">
-                        <p>Nome do Produto: Feijão</p>
-                        <p>Descrição: Feijão carioca.</p>
-                        <p>Valor: R$8,00</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Higiene e Limpeza -->
-            <div id="higiene-e-limpeza" class="mt-4">
-                <h3>Higiene e Limpeza</h3>
-                <div class="row">
-                    <div class="col-md-6">
-                        <img src="images/sabao.png" alt="Sabão em Pó" class="img-fluid">
-                        <p>Nome do Produto: Sabão em Pó</p>
-                        <p>Descrição: Sabão em pó para roupas.</p>
-                        <p>Valor: R$15,00</p>
-                    </div>
-                    <div class="col-md-6">
-                        <img src="images/agua_sanitaria.png" alt="Água Sanitária" class="img-fluid">
-                        <p>Nome do Produto: Água Sanitária</p>
-                        <p>Descrição: Água sanitária para limpeza.</p>
-                        <p>Valor: R$3,00</p>
                     </div>
                 </div>
             </div>
@@ -113,8 +110,33 @@
                     <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
                 </div>
                 <div class="mb-3">
+                    <label for="cpf" class="form-label">CPF</label>
+                    <input type="text" class="form-control" id="cpf" placeholder="Digite seu CPF" required>
+                </div>
+                <div class="mb-3">
+                    <label for="endereco" class="form-label">Endereço</label>
+                    <input type="text" class="form-control" id="endereco" placeholder="Digite seu endereço" required>
+                </div>
+                <div class="mb-3">
+                    <label for="telefone" class="form-label">Telefone</label>
+                    <input type="tel" class="form-control" id="telefone" placeholder="Digite seu telefone" required>
+                </div>
+                <div class="mb-3">
                     <label for="email" class="form-label">E-mail</label>
                     <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required>
+                </div>
+                <div class="mb-3">
+                    <label for="sexo" class="form-label">Sexo</label>
+                    <div>
+                        <input type="radio" id="masculino" name="sexo" value="Masculino" required>
+                        <label for="masculino">Masculino</label>
+                        <input type="radio" id="feminino" name="sexo" value="Feminino" required>
+                        <label for="feminino">Feminino</label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <input type="checkbox" id="termos" required>
+                    <label for="termos">Aceito os termos e condições</label>
                 </div>
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
@@ -137,6 +159,10 @@
                     <label for="data" class="form-label">Data</label>
                     <input type="date" class="form-control" id="data" required>
                 </div>
+                <div class="mb-3">
+                    <label for="hora" class="form-label">Hora</label>
+                    <input type="time" class="form-control" id="hora" required>
+                </div>
                 <button type="submit" class="btn btn-primary">Confirmar Agendamento</button>
             </form>
         </section>
@@ -149,6 +175,14 @@
 
     <!-- JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script>
+        // Mensagem de sucesso ao enviar formulário
+        document.querySelectorAll("form").forEach(form => {
+            form.addEventListener("submit", function(event) {
+                event.preventDefault();
+                alert("Formulário enviado com sucesso!");
+            });
+        });
+    </script>
 </body>
 </html>
